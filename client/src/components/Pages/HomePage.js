@@ -16,7 +16,7 @@ import axios from "axios";
 import { Typography } from "@mui/material";
 import ItemNotFound from "./ItemNotFound";
 import { auth } from "../../firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import RangeSlider from "../RangeSlider/RangeSlider";
 import { priceRanges } from "../../data/priceRanges";
 import PageLoader from "../PageLoader/PageLoader";

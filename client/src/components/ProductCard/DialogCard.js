@@ -14,6 +14,7 @@ import { db } from "../../firebase";
 import useNotification from "../SnackBar/useNotification";
 import { MyContext } from "../../MyContext";
 import { CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function DialogCard({ data, user_id }) {
   const [open, setOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function DialogCard({ data, user_id }) {
   const { itemCount } = useContext(MyContext);
   const [totalItemCount, setTotalItemCount] = itemCount;
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -31,6 +33,11 @@ export default function DialogCard({ data, user_id }) {
   };
 
   const handleAddCartClick = async () => {
+    if (user_id === undefined || !user_id) {
+      navigate('/sign-in');
+      return;
+    }
+
     setLoading(true);
     try {
       // Query the cartItems collection to check if the item exists for the user

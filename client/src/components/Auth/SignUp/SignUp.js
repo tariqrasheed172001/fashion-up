@@ -14,7 +14,6 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import GoogleSignIn from "../GoogleSignIn/GoogleSignIn";
 import {
   createUserWithEmailAndPassword,
-  updatePhoneNumber,
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../../../firebase";

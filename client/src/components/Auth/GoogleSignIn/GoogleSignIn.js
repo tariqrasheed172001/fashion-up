@@ -1,5 +1,5 @@
 import { signInWithPopup } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { auth, provider } from "../../../firebase";
 import GoogleButton from "react-google-button";
 import { useNavigate } from "react-router-dom";

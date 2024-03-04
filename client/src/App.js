@@ -6,7 +6,6 @@ import SignUp from "./components/Auth/SignUp/SignUp";
 import SignIn from "./components/Auth/SignIn/SignIn";
 import PhoneSignIn from "./components/Auth/PhoneSignIn/PhoneSignIn";
 import { SnackbarProvider } from "notistack";
-import ProtectRoutes from "./routeProtection/ProtectCart";
 import ProtectCart from "./routeProtection/ProtectCart";
 import ProtectAuth from "./routeProtection/ProtectAuth";
 import { MyContext } from "./MyContext";
